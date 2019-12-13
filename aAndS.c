@@ -48,7 +48,15 @@ int get_line (char s[]){
 }
 
 int getword(char w[]){
-	
+	printf("Enter word: ");
+	fgets(w, WORD, stdin);
+	int counter = 0;
+	char c = w[counter];
+	while(c != '\n' && c!= '\t' && c != ' ' && c != '\0'){
+		counter++;
+		c = w[counter];
+	}
+	return counter;
 	
 }
 /*
@@ -60,9 +68,19 @@ int similar(char *s, char *t, int n);
 void print_similar_words(char * str);
 */
 
-void printArray(int arr[], int length){
+void printIntArray(int arr[], int length){
 	for(int i = 0; i < length; i++){
 		printf("%d", arr[i]);
+		if(i + 1 < length){
+			printf(", ");
+		}else{
+			printf("\n");
+		}
+	}
+}
+void printCharArray(char arr[], int length){
+	for(int i = 0; i < length; i++){
+		printf("%c", arr[i]);
 		if(i + 1 < length){
 			printf(", ");
 		}else{

@@ -20,4 +20,6 @@ int substring(char* str1, char* str2);
 int similar(char *s, char *t, int n);
 void print_similar_words(char * str);
 */
-void printArray(int arr[], int length);
+void printIntArray(int arr[], int length);
+
+void printCharArray(char arr[], int length);

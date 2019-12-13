@@ -9,13 +9,16 @@ int main(){
 	int arr3[] = {5,3,7,9,3,5,7,5,3,7,3,6,3};
 	int len3 = sizeof(arr3) / sizeof(*arr3);
 	int* p = arr3;
-	printArray(arr3, len3);
+	printIntArray(arr3, len3);
 	insertion_sort(p, len3);
-	printArray(arr3, len3);
+	printIntArray(arr3, len3);
 	printf("%d\n", len3); 
 	char s[] = {'a', 'b', 'a', '1', '\0', 'a'};
 	char s1[LINE] = "";
-	printf("%d\n", get_line (s1));
+	char w[WORD] = "";
+	int getWord = getword (w);
+	printf("%d\n", getWord);
+	printCharArray(w, getWord);
 	//printf("%lu\n", sizeof(s1) / sizeof(*s1));
 	
 	
