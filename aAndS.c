@@ -48,16 +48,17 @@ int get_line (char s[]){
 }
 
 int getword(char w[]){
-	printf("Enter word: ");
-	fgets(w, WORD, stdin);
-	int counter = 0;
-	char c = w[counter];
-	while(c != ENTER && c!= TAB && c != SPACE && c != END){
-		counter++;
-		c = w[counter];
-	}
-	return counter;
 	
+	int count = 0;
+	printf("Enter word: ");
+	char c = getchar();
+	w[0] = c;
+	while(c != ENTER && c != TAB && c != SPACE && c != END){			count++;
+		c = getchar();
+		w[count] = c;
+	}
+	//printf("There are %d letters \n", count);
+	return count;
 }
 /*
 

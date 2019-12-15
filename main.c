@@ -18,7 +18,7 @@ int main(){
 	char w[WORD] = "";
 	int getWord = getword (w);
 	printf("%d\n", getWord);
-	printCharArray(w, getWord);
+	printCharArray(w, getWord + 234);
 	//printf("%lu\n", sizeof(s1) / sizeof(*s1));
 	
 	
