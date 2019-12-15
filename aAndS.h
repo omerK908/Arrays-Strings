@@ -3,6 +3,7 @@
 #define ENTER '\n'
 #define TAB '\t'
 #define SPACE ' '
+#define END '\0'
 
 
 void shift_element(int* arr, int i);

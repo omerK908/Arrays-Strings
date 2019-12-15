@@ -40,7 +40,7 @@ int get_line (char s[]){
 	fgets(s, LINE, stdin);
 	int counter = 0;
 	char c = s[counter];
-	while(c != '\n' && c != '\0'){
+	while(c != ENTER && c != END){
 		counter++;
 		c = s[counter];
 	}
@@ -52,7 +52,7 @@ int getword(char w[]){
 	fgets(w, WORD, stdin);
 	int counter = 0;
 	char c = w[counter];
-	while(c != '\n' && c!= '\t' && c != ' ' && c != '\0'){
+	while(c != ENTER && c!= TAB && c != SPACE && c != END){
 		counter++;
 		c = w[counter];
 	}
@@ -81,9 +81,7 @@ void printIntArray(int arr[], int length){
 void printCharArray(char arr[], int length){
 	for(int i = 0; i < length; i++){
 		printf("%c", arr[i]);
-		if(i + 1 < length){
-			printf(", ");
-		}else{
+		if(i + 1 >= length){
 			printf("\n");
 		}
 	}
