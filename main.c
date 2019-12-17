@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include "aAndS.h"
+#include<string.h>
 	
 int main(){
+	/*
 	int i = 3;
 	int len = 8;
 	int arr[] = {1, 3, 2, 4, 6, 5, 8, 7};
@@ -10,7 +12,10 @@ int main(){
 	int len3 = sizeof(arr3) / sizeof(*arr3);
 	int* p = arr3;
 	printIntArray(arr3, len3);
+	printf("\n");
 	insertion_sort(p, len3);
+	printf("\n");
+	
 	printIntArray(arr3, len3);
 	printf("%d\n", len3); 
 	char s[] = {'a', 'b', 'a', '1', '\0', 'a'};
@@ -18,12 +23,14 @@ int main(){
 	char w[WORD] = "";
 	int getWord = getword (w);
 	printf("%d\n", getWord);
-	printCharArray(w, getWord + 234);
-	//printf("%lu\n", sizeof(s1) / sizeof(*s1));
+	printCharArray(w, getWord);
+	*/
+	char* str1 = "omeasomeccer";
+	char* str2 = "omer";
+	printf("%d\n", substring(str1,str2));
+	printf("%d\n", similar(str1, str2, 8));
 	
+	//printf("%lu\n", sizeof(s1) / sizeof(*s1));
 	
 	return 0;
 }
-
-
-	
