@@ -1,36 +1,26 @@
 #include <stdio.h>
-#include "aAndS.h"
-#include<string.h>
+#include "textfind.h"
+#include <string.h>
 	
 int main(){
-	/*
-	int i = 3;
-	int len = 8;
-	int arr[] = {1, 3, 2, 4, 6, 5, 8, 7};
-	int arr2[] = {8,7,6,5,4,3,2,1};
-	int arr3[] = {5,3,7,9,3,5,7,5,3,7,3,6,3};
-	int len3 = sizeof(arr3) / sizeof(*arr3);
-	int* p = arr3;
-	printIntArray(arr3, len3);
-	printf("\n");
-	insertion_sort(p, len3);
-	printf("\n");
+	char w[WORD];
+	get_word(w);
+	char c = getchar();
+
+	switch (c)
+	{
+	case 'a':
+		print_lines(w);
+		break;
+
+	case 'b':
+		print_similar_words(w);
+		break;
 	
-	printIntArray(arr3, len3);
-	printf("%d\n", len3); 
-	char s[] = {'a', 'b', 'a', '1', '\0', 'a'};
-	char s1[LINE] = "";
-	char w[WORD] = "";
-	int getWord = getword (w);
-	printf("%d\n", getWord);
-	printCharArray(w, getWord);
-	*/
-	char* str1 = "omeasomeccer";
-	char* str2 = "omer";
-	printf("%d\n", substring(str1,str2));
-	printf("%d\n", similar(str1, str2, 8));
-	
-	//printf("%lu\n", sizeof(s1) / sizeof(*s1));
+	default:
+		printf("Wrong command\n");
+		break;
+	}	
 	
 	return 0;
 }
