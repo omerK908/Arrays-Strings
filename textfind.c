@@ -2,6 +2,7 @@
 #include <math.h>
 #include <string.h>
 #include "textfind.h"
+#include <stdbool.h> 
 
 int get_line (char s[]){
 	char c;
@@ -15,7 +16,7 @@ int get_line (char s[]){
 			counter++;
 		}
 	} while (c != EOF && c!= ENTER && counter < LINE);
-	s[counter + 1] = END;
+	s[counter] = END;
 	if(c == EOF){
 		return EOF;
 	}
@@ -48,12 +49,12 @@ int substring(char* str1, char* str2){
 	p1 = str1;
 	p2 = str2;
 
-	for(i = 0; i<strlen(str1); i++)
+	for(i = 0; i < strlen(str1); i++)
 	{
 		if(*p1 == *p2)
 		{
 			p3 = p1;
-			for(j = 0;j<strlen(str2);j++)
+			for(j = 0; j < strlen(str2); j++)
 			{
 				if(*p3 == *p2)
 				{
@@ -63,19 +64,19 @@ int substring(char* str1, char* str2){
 					break;
         	}
 			p2 = str2;
-			if(j == strlen(str2) - 1)
+			if(j == strlen(str2))
 			{
 				flag = 1;
-    			return 1;
+    			return true;
         	}
     	}
     	p1++; 
 	}
 	if(flag==0)
 	{
-    	return 0;
+    	return false;
 	}
-	return 0;
+	return false;
 }
 
 int similar(char *s, char *t, int n){
@@ -84,7 +85,7 @@ int similar(char *s, char *t, int n){
 	if(ln1 == ln2){
 		for (size_t i = 0; i < ln1; i++)
 		{
-			if(*(s + i) != *(t + i))return 0;
+			if(*(s + i) != *(t + i))return false;
 		}
 		return 1;
 	}
@@ -104,11 +105,11 @@ int similar(char *s, char *t, int n){
 			i++;
 		}
 		if(n < 0){
-			return 0;
+			return false;
 		}
-		return 1;
+		return true;
 	}
-	return 0;
+	return false;
 }
 
 void print_lines(char* str){
