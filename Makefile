@@ -1,7 +1,7 @@
 CC = gcc
 FLAGS = -Wall -g
 
-all: isort textfind
+all: isort txtfind
 
 isort: imain.o isort.o
 	$(CC) $(FLAGS) -o isort imain.o isort.o 
@@ -13,16 +13,16 @@ isort.o: isort.c isort.h
 	$(CC) $(FLAGS) -c isort.c 
 
 
-textfind: main.o textfind.o
-	$(CC) $(FLAGS) -o textfind main.o textfind.o 
+txtfind: main.o txtfind.o
+	$(CC) $(FLAGS) -o txtfind main.o txtfind.o 
 
-main.o: textfind.c textfind.h
+main.o: txtfind.c txtfind.h
 	$(CC) $(FLAGS) -c main.c 
 
-textfind.o: textfind.c textfind.h
-	$(CC) $(FLAGS) -c textfind.c
+txtfind.o: txtfind.c txtfind.h
+	$(CC) $(FLAGS) -c txtfind.c
 
 .PHONY: clean all
 
 clean:
-	rm -f *.o isort textfind
+	rm -f *.o isort txtfind

@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include "textfind.h"
+#include "txtfind.h"
 	
 int main(){
 	char w[WORD];
