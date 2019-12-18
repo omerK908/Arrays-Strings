@@ -8,6 +8,5 @@ int main(){
         scanf("%d", &x);
         *(arr + i) = x;
     }
-    insertion_sort(arr, SIZE);
-    
+    insertion_sort(arr, SIZE);    
 }

@@ -60,8 +60,9 @@ int substring(char* str1, char* str2){
 				{
 					p3++;p2++;
 				}
-    			else
+    			else{
 					break;
+				}
         	}
 			p2 = str2;
 			if(j == strlen(str2))
