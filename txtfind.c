@@ -6,6 +6,7 @@
 
 int get_line (char s[]){
 	char c;
+	
 	int counter = 0;
 	do
 	{
