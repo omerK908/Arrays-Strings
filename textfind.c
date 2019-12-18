@@ -91,7 +91,7 @@ int similar(char *s, char *t, int n){
 		return 1;
 	}
 	else if(ln1 > ln2){
-		int i = 0, j = 0, notSim = 0, sim = 0;
+		int i = 0, j = 0;
 		while(i < ln1 && j < ln2){
 			if(*(s + i) == *(t + j)){
 				i++;
